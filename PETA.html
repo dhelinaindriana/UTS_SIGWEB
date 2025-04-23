@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Lokasi Fakultas di UGM</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <script src="leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>    
+    <link rel = "icon" href = "ugm.png" 
+    type = "image/x-icon">
+    <style>
+       body {
+        padding: 0;
+        margin: 0;
+        }
+        html, body, #map {
+        height: 100%;
+        width: 100%;
+        }
+        .leaflet-popup-content {
+        max-width: 200px;
+        height: 100px;
+        overflow-y: scroll;
+        }
+        .site-header {
+        background-color:rgb(233, 216, 189);
+        width: 100%;
+        }
+        .site-header h1 {
+        margin: 0;
+        padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+    <h1>Lokasi 5 Fakultas di UGM</h1>
+    </header>
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map', {
+            center: [-7.76990449153034, 110.37886667926931],
+            zoom: 15
+        });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+    var marker =[] 
+    marker[0] = L.marker([-7.765303448587764, 110.37252475514175],{
+        title: "Fakultas Teknik"
+    }).addTo(map).bindPopup(
+        '<h3> Fakultas Teknik </h3> <p>Fakultas  Teknik  Universitas  Gadjah  Mada  lahir  dalam  kancah revolusi.  Pada  akhir  Perang  Dunia II, setelah Jepang menyerah pada tahun 1945, dan diproklamasikan Kemerdekaan  Indonesia pada tanggal 17 Agustus 1945, lahirlah Sekolah Tinggi Teknik (STT) Bandoeng. Sebagai hasil  pengambilalihan kekuasaan dari  pemerintah Jepang oleh Pemerintah Republik Indonesia, STT ini merupakan kelanjutan Koo Gyoo Dai Gaku pada masa pendudukan Jepang dan Technische Hoogeschool pada masa pendudukan Belanda.</p> <img src ="TEKNIK.jpg" style="width:150px">')
+    marker[1] = L.marker([-7.766085558079121, 110.37758191979245],{
+        title: "Fakultas Geografi"
+    }).addTo(map).bindPopup(
+        '<h3> Fakultas Geografi </h3> <p>Pada tahun 1950, Fakultas Geografi UGM awalnya merupakan salah satu jurusan pada Fakultas Sasta, Pedagogik dan Filsafat UGM, yaitu Jurusan Ilmu Bumi. Pada tahun 1956 Fakultas ini diubah menjadi Fakultas Sastra dan Kebudayaan UGM. Waktu itu Jurusan Ilmu Bumi. Berkembang dengan pesat. Peran pakar Ilmu Bumi semakin nyata dalam pembangunan dan semakin luas kiprahnya, hingga akhirnya Fakultas Sastra dan Kebudayaan UGM merelakan Jurusan Ilmu Bumi berubah menjadi Fakultas Geografi UGM (1 September 1963 dan seterusnya diperingati sebagai lahirnya fakultas ini). Pada saat dibuka, fakultas ini memiliki dua jurusan (Prodi), yaitu Jurusan Geografi Fisik dan Jurusan Geografi Manusia.</p> <img src ="GEOGRAFI.jpg" style="width:150px">')    
+    marker[2] = L.marker([-7.76990449153034, 110.37886667926931],{
+        title: "Fakultas Ekonomika dan Bisnis"
+    }).addTo(map).bindPopup(
+        '<h3> Fakultas Ekonomika dan Bisnis </h3><p>Fakultas Ekonomika dan Bisnis Universitas Gadjah Mada (atau disingkat FEB UGM) adalah salah satu fakultas di Universitas Gadjah Mada. Fakultas Ekonomika dan Bisnis Universitas Gadjah Mada didirikan pada tahun 1955 sebagai hasil dari reorganisasi Fakultas Hukum, Ekonomi, dan Politik Sosial.</p> <img src ="FEB.jpg" style="width:150px">')
+    marker[3] = L.marker([-7.772111890615094, 110.3799542478921],{
+        title: "Fakultas Psikologi"
+    }).addTo(map).bindPopup(
+        '<h3> Fakultas Psikologi </h3> <p>Fakultas Psikologi Universitas Gadjah Mada adalah salah satu fakultas di Universitas Gadjah Mada yang didirikan pada tanggal 8 Januari 1965. Fakultas Psikologi UGM adalah salah satu fakultas psikologi yang awal berdiri di Indonesia. Saat ini Fakultas Psikologi UGM dipimpin oleh: Rahmat Hidayat, S.Psi., M.Sc., Ph.D..</p> <img src ="PSIKOLOGI.jpg" style="width:150px">')    
+    marker[4] = L.marker([-7.767249120564918, 110.38476681961006],{
+        title: "Fakultas Kedokteran Hewan"
+    }).addTo(map).bindPopup(
+        '<h3> Fakultas Kedokteran Hewan </h3> <p>Pada tanggal 19 Desember 1949, pemerintah RI mendirikan Universiteit Negeri Gadjah Mada, yang terdiri dari gabungan semua Perguruan Tinggi di Yogyakarta dan PTKH termasuk di dalamnya dan diubah namanya menjadi Fakultet Kedokteran Hewan dan menempati beberapa lokasi milik Kasultanan Yogyakarta untuk penyelenggaraan perkuliahannya seperti pagelaran, Balapan, Bintaran, Ngasem. Pada tahun 1955, nama Fakultet Kedokteran Hewan berubah menjadi Fakultas Kedokteran Hewan dan Peternakan (FKHP) yang akhirnya pada tanggal 10 November 1969 FKHP dipisah menjadi Fakultas Kedokteran Hewan dan Fakultas Peternakan</p> <img src ="FKH.jpg" style="width:150px">')
+    </script>
+
+</body>
+</html>
